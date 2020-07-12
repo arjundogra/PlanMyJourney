@@ -19,8 +19,3 @@ app.post('/api', (req,res) => {
     console.log(val);
     res.send(val);
 })
-
-app.get('/a' ,(req,res)=>{
-    console.log("heyBuddy");
-    res.send({hey:"hey budyy"})
-})
