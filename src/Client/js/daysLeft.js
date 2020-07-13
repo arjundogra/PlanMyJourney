@@ -6,7 +6,7 @@ function daysLeft(tripDate){
     const difference_in_time = (date2.getTime() - date1.getTime())
     console.log(difference_in_time);
     const difference_in_days = difference_in_time / (1000*86400);
-    console.log(Math.floor(difference_in_days));    
+    return Math.floor(difference_in_days);  
 }
 
 export{
