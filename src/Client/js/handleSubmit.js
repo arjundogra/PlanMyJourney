@@ -1,16 +1,18 @@
 import { daysLeft } from "./daysLeft";
 import fetch from "node-fetch";
+import { UIupdate } from "./UIupdate";
 
 let UIdata = {}
 
 async function handleSubmit(event){
     const destination = document.getElementById('destination').value;
+    UIdata.dest = destination;
     console.log(destination);
     const tripDate = document.getElementById('tripDate').value;
     console.log(tripDate)
 
     const leftDays = await daysLeft(tripDate);
-    console.log(leftDays)
+    UIdata.leftDays = leftDays;
 
     const response = await fetch('/api', {
         method:'POST' ,
@@ -42,19 +44,12 @@ async function handleSubmit(event){
     const getPic = await fetch(`/img?dest=${destination}`);
     const getPicData = await getPic.json();
     console.log(getPicData);
-    let picUrl = {
-        pic1: getPicData.hits[0].largeImageURL,
-        pic2: getPicData.hits[1].largeImageURL,
-        pic3: getPicData.hits[2].largeImageURL,
-        pic4: getPicData.hits[3].largeImageURL
-    }
-    Object.assign(UIdata, picUrl);
+    UIdata.pic = getPicData.hits[0].largeImageURL;
     console.log(UIdata);
 
-    document.getElementById('1').src = UIdata.pic1;
-    document.getElementById('2').src = UIdata.pic2;
-    document.getElementById('3').src = UIdata.pic3;
-    document.getElementById('4').src = UIdata.pic4;
+    document.getElementById('myModal').style.display = "block";
+
+    UIupdate(UIdata);
 
 }
 

