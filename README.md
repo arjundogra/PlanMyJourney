@@ -1,4 +1,4 @@
-<h1>Travelopolis</h1>
+<h1>PlanMyTrip</h1>
 
 The following project is part of the capstone project for Udacity's Front End Nano Degree program. The following project is a travel app that allows a user to understand and plan their vacation in more detail than a reguarl travel app before they buy their tickets. 
 
@@ -10,7 +10,7 @@ To run the project in production mode, in the command line type 'npm run build-p
 
 After either steps, you then need to run 'npm run start' in the command line. 
 
-Once all of this is done, the local host in running on port 8082. 
+Once all of this is done, the local host in running on port 8084. 
 
 <h2>Installing</h2>
 To install dependcies, in the command line run 'npm install' 
@@ -23,6 +23,6 @@ For testing, run the following in command line:
 -HTML
 -SCSS
 -JS
--BABEL
 -NODE
+-EXPRESS
 -WEBPACK
