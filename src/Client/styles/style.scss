@@ -9,7 +9,10 @@ body{
 
 .loader {
     border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+    border-top: 16px solid blue;
+    border-right: 16px solid green;
+    border-bottom: 16px solid red;
+    border-left: 16px solid yellow; 
     border-radius: 50%;
     width: 80px;
     height: 80px;
@@ -60,6 +63,7 @@ body{
     // }
 
     label{
+        font-family: 'Philosopher', sans-serif;
         text-align: center;
         display: block;
         font-size: 2.5em;
@@ -94,6 +98,7 @@ body{
         }
 
     }
+
 }
 
 footer{
@@ -134,10 +139,13 @@ footer{
         border-radius: 20px;
         background-image: url(https://images.unsplash.com/photo-1439792675105-701e6a4ab6f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80);
         h1{
+            text-transform: capitalize;
             text-align: center;
             margin: 5px;
+            font-size: 40px;
         }
         .content{
+            font-size: 25px;
             display: flex;
             flex-direction: column;
             margin: 0px 40px;
@@ -156,6 +164,14 @@ footer{
 
             ul{
                 margin: 0px;
+            }
+
+            #print{
+                width: 85px;
+                color: red;
+                border: 2px solid red;
+                border-radius: 15px;
+                background-color: rgba(0,0,0,0);
             }
         }
     }
@@ -219,6 +235,32 @@ footer{
             }
         }
     }
+
+    .modal{
+        .modal-box{
+            min-height: 60%;
+            #close{
+                font-size: 30px;
+                margin: 10px;
+            }
+            #mainHeading{
+                text-align: center;
+                margin: 40px 0px;
+            }
+            .content{
+                min-height: 400px;
+    
+                img{
+                    width: 100%;
+                    margin: 40px 0px;
+                }
+    
+            }
+        }
+    
+    }
+    
+
     footer{
         margin-bottom: 0px;
         p{

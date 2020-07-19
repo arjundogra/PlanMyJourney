@@ -4,7 +4,10 @@ import { UIupdate } from "./UIupdate";
 
 let UIdata = {}
 
+document.getElementById('btn').onclick = handleSubmit;
+
 async function handleSubmit(event){
+    document.getElementById('loader').className = 'loader';
     const destination = document.getElementById('destination').value;
     UIdata.dest = destination;
     console.log(destination);

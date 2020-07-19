@@ -1,4 +1,5 @@
 function UIupdate(data){
+    document.getElementById('loader').className = "";
     document.getElementById('close').onclick = function(){
         document.getElementById('myModal').style.display = "none";
     }
